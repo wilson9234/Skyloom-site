@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dental Websites That Convert – Skyloom Digital" />
+  <title>Skyloom – Dental Web Design Agency</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="container">
+<h1 class="skyloom-text-logo"><span class="blue">Sky</span><span class="white">loom</span></h1>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#Featuredwork">Portfolio</a>
+      <a href="#book">Book Call</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="hero-section">
+  <div class="hero-glass">
+    <div class="hero-text">
+      <h1>Dental Websites That Attract More Patients — Fast.</h1>
+      <p>Custom-built, SEO-ready, and mobile-optimized websites crafted specifically for dental clinics.</p>
+      <a href="#book" class="btn-primary">Book Your Free Strategy Call</a>
+    </div>
+    <img src="Dentalchair.png" alt="Dental Chair" />
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section" id="services">
+  <div class="container benefits-grid">
+    <div class="glass benefit">
+      <h3>📈 More Patients</h3>
+      <p>Our sites convert visitors into bookings with clear messaging and fast load times.</p>
+    </div>
+    <div class="glass benefit">
+      <h3>🚀 Fast Delivery</h3>
+      <p>Get a professional site delivered within 18 days — no fluff, no delays.</p>
+    </div>
+    <div class="glass benefit">
+      <h3>🔍 SEO Optimized</h3>
+      <p>Rank higher in Google and get found by patients searching locally.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">How It Works</h2>
+    <div class="process-steps">
+      <div class="step glass">Discovery Call</div>
+      <div class="step glass">Custom Layout Proposal</div>
+      <div class="step glass">Design & Build</div>
+      <div class="step glass">Launch & Go Live</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Featured Work</h2>
+    <div class="carousel-wrapper" id="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+<img src="mockup.png" alt="..." class="lightbox-trigger" data-img="mockup1.png" />
+          <p class="carousel-caption">Clean layout for Pure Smiles Dental with strong CTA placement.</p>
+        </div>
+        <div class="carousel-slide">
+<img src="mockup2.png" alt="..." class="lightbox-trigger" data-img="mockup1.png" />
+          <p class="carousel-caption">Welcoming design for family-focused practices.</p>
+        </div>
+        <div class="carousel-slide">
+<img src="mockup3.png" alt="..." class="lightbox-trigger" data-img="mockup1.png" />
+          <p class="carousel-caption">Modern layout designed to boost trust and bookings.</p>
+        </div>
+       <!-- Lightbox Overlay -->
+<div id="lightbox" class="lightbox">
+  <img id="lightbox-img" src="" alt="Expanded View" />
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CALENDLY SECTION -->
+<section id="book" class="section">
+  <div class="container glass">
+    <h2>Book Your Free Strategy Call</h2>
+    <p>No obligation — just free insights to help you grow your practice.</p>
+    <div class="calendly-embed">
+      <iframe src="https://calendly.com/skyloom/30min" class="calendly-inline-widget" frameborder="0"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="social-glass">
+  <a href="https://m.facebook.com/profile.php?id=61575622748012" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" />
+  </a>
+  <a href="https://www.instagram.com/skyloom_digital/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" />
+  </a>
+  
+</div>
+
+</footer>
+
+
+<!-- Animations -->
+<script>
+  document.querySelectorAll('.lightbox-trigger').forEach(img => {
+    img.addEventListener('click', () => {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = img.dataset.img;
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  document.getElementById('lightbox').addEventListener('click', () => {
+    document.getElementById('lightbox').style.display = 'none';
+  });
+</script>
+
+</script>
+
+</body>
+</html>
