@@ -95,13 +95,13 @@ body {
   margin-bottom: 1rem;
   color: #fff;
 }
+
 .hero-text p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
   color: #cbd5e1;
 }
 
-/* BUTTON */
 .btn-primary {
   display: inline-block;
   padding: 1rem 2.5rem;
@@ -113,7 +113,9 @@ body {
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
   transition: all 0.3s ease;
   text-decoration: none;
+  margin-top: 1.5rem; /* ⬅ Ensures spacing below paragraph */
 }
+
 .btn-primary:hover {
   background: linear-gradient(to right, #2563eb, #3b82f6);
   box-shadow: 0 0 25px rgba(59, 130, 246, 0.8);
@@ -281,4 +283,61 @@ blockquote {
   50%  { transform: translateX(-200%); }
   75%  { transform: translateX(-300%); }
   100% { transform: translateX(0%); }
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.glass.benefit h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #60a5fa;
+}
+.glass.benefit p {
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 6rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .glass.benefit {
+    margin-bottom: 1.5rem;
+  }
+}
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+  background: #25d366;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.whatsapp-float img {
+  width: 24px;
+  height: 24px;
 }
