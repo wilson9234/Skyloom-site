@@ -37,23 +37,28 @@ if (nav) {
   });
 }
 const track = document.querySelector('.carousel-track');
-const prevBtn = document.querySelector('.carousel-btn.prev');
-const nextBtn = document.querySelector('.carousel-btn.next');
+const prevBtn = document.querySelector('.carousel-prev');
+const nextBtn = document.querySelector('.carousel-next');
 
 let currentIndex = 0;
-const items = document.querySelectorAll('.carousel-item');
+const items = document.querySelectorAll('.carousel-slide');
 
 function updateCarousel() {
+  if (!track) return;
   const offset = -currentIndex * 100;
   track.style.transform = `translateX(${offset}%)`;
 }
 
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % items.length;
-  updateCarousel();
-});
+if (nextBtn && items.length > 0) {
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateCarousel();
+  });
+}
 
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + items.length) % items.length;
-  updateCarousel();
-});
+if (prevBtn && items.length > 0) {
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    updateCarousel();
+  });
+}
